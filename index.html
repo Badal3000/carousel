@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corousal
+    </title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        img,
+        video {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 72px;
+            width: 100dvw;
+            height: 100dvh;
+            gap: 24px;
+        }
+
+        .carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 720px;
+            position: relative;
+
+        }
+
+        .slided {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .carousel-pagination {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+            color: black;
+        }
+
+        .pagination-changers {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-changer {
+            z-index: 50;
+            min-height: 12%;
+            min-width: 3.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            background-color: #efefef80;
+            transform: scaleY(1.5);
+        }
+
+        .prev {
+            border-radius: 0 18px 18px 0;
+        }
+
+        .next {
+            border-radius: 18px 0 0 18px;
+        }
+
+        .slider-container {
+            overflow: hidden;
+        }
+
+        .carousel {
+            width: 100%;
+            height: min-content;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+        .active{
+            font-size: 4rem;
+        }
+        .dot{
+            background: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="carousel">
+            <div class="slider-container">
+
+                <!-- <div class="slided"><img src="https://picsum.photos/seed/slide1/1080/720" alt=""></div> -->
+                <!-- <div class="slided"><img src="https://picsum.photos/seed/slide2/1080/720" alt=""></div> -->
+                <!-- <div class="slided"><img src="https://picsum.photos/seed/slide3/1080/720" alt=""></div> -->
+                <!-- <div class="slided"><img src="https://picsum.photos/seed/slide4/1080/720" alt=""></div> -->
+                <!-- <div class="slided"><img src="https://picsum.photos/seed/slide5/1080/720" alt=""></div> -->
+            </div>
+            <div class="carousel-pagination">
+                <div class="pagination-changers">
+                    <div class="prev page-changer">&lt</div>
+                    <div class="next page-changer">&gt</div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            <span class="dot">
+                .
+            </span>
+            
+        </div>
+        <script src="script.js"></script>
+
+    </main>
+</body>
+
+</html>
